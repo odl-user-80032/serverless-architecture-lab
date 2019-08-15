@@ -42,7 +42,7 @@ namespace TollBooth
                         new FeedOptions() { EnableCrossPartitionQuery = true, MaxItemCount = 100 }).ToList();
 
 
-            _log.LogInformation($"{licensePlates.Count()} license plates found that are ready for export");
+            _log.LogInformation($"{licensePlates.Count()} total license plates found");
                     licensePlates = licensePlates.Where(l => l.exported == false)
                     .ToList();
             }
